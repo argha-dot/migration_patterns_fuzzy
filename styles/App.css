@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+
 .app {
   min-height: 100vh;
 }
@@ -11,30 +14,99 @@
   overflow-x: hidden;
 }
 
+.modes {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  z-index: 100;
+  padding: 0.5rem;
+}
+
 .features-container {
   position: absolute;
-  width: 50%;
+  width: 40%;
   background: transparent;
   top: 0;
   right: 0;
   display: flex;
   height: 100%;
+  transition: transform 200ms ease-in;
 }
 
 .features-toggler {
   height: fit-content;
   height: 50px;
   display: block;
-  transform: translate(0);
+  transform: translate(0%);
   background: white;
   border: none;
 }
 
-.toggled {
+.features-toggler {
+  transform: rotateY(0.5turn);
+  transition: transform 200ms ease-out;
+}
+
+.toggled-container {
   transform: translate(93%);
+  transition: transform 200ms ease-out;
+}
+
+.toggled-btn {
+  transform: rotateY(0);
+  transition: transform 200ms ease-out;
 }
 
 .features-content {
   background: white;
   width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.features-content h3 {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.feature {
+  padding: 1rem 2rem;
+  /* padding-bottom: 1rem; */
+  border-bottom: 1px solid #a69090;
+  opacity: 0.10;
+}
+
+.feature h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.feature p {
+  font-family: 'Montaga', serif;
+}
+
+.feature.visible {
+  opacity: 1;
+}
+
+.sidebar {
+  background-color: rgba(35, 55, 75, 0.9);
+  color: #fff;
+  padding: 6px 12px;
+  font-family: monospace;
+  z-index: 1;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  margin: 12px;
+  border-radius: 4px;
 }

@@ -10,7 +10,9 @@
   "dependencies": {
     "mapbox-gl": "^2.8.2",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-toggle-component": "^3.0.8",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
