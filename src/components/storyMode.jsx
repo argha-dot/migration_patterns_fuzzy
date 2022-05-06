@@ -108,7 +108,12 @@ const StoryMode = () => {
         lat={config.center.lat}
         zoom={config.zoom}
       />
-      <Slide PARTS={PARTS} map={map} />
+      <Slide
+        PARTS={PARTS}
+        map={map}
+        currentSection={currentSection}
+        setCurrentSlide={setCurrentSection}
+      />
     </>
   )
 }

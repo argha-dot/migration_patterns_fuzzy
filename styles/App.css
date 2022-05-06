@@ -67,8 +67,8 @@
   background: white;
   width: 100%;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   overflow-y: scroll;
 }
 
@@ -81,7 +81,8 @@
   padding: 1rem 2rem;
   /* padding-bottom: 1rem; */
   border-bottom: 1px solid #a69090;
-  opacity: 0.10;
+  opacity: 1;
+  height: 100vh;
 }
 
 .feature h3 {
