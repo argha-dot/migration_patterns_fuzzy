@@ -7,7 +7,6 @@ const Feature = ({part, map}) => {
 
   useEffect(() => {
     if (isVisible) {
-      // map.current.flyTo
       map.current.flyTo({
         center: [
           ...part.center

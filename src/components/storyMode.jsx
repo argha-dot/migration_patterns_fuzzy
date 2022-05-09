@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Map } from "mapbox-gl"
 import Slide from "./slide";
 import Sidebar from "./sidebar";
+import Infobox from './infobox';
 
 const PARTS = {
   "part_1": {
@@ -81,7 +82,11 @@ const StoryMode = () => {
     });
 
     map.current.on('load', () => {
-      map.current.setLayoutProperty('dev-char-paths-unf-b3she6', 'visibility', 'none')
+      map.current.setLayoutProperty('dev-char-paths-unf', 'visibility', 'none')
+      map.current.setLayoutProperty('dev-char-layer-unf-bang', 'visibility', 'none')
+      map.current.setLayoutProperty('dev-char-layer-unf-pak', 'visibility', 'none')
+      map.current.setLayoutProperty('dev-char-layer-unf-ind', 'visibility', 'none')
+      console.log(map.current.getStyle().layers)
     });
   }, [])
 
@@ -114,6 +119,7 @@ const StoryMode = () => {
         currentSection={currentSection}
         setCurrentSlide={setCurrentSection}
       />
+      <Infobox />
     </>
   )
 }
