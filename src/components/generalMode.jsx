@@ -36,7 +36,6 @@ const GeneralMode = () => {
   const mapContainer = useRef(null);
   const map = useRef(null);
 
-  const [currentSection, setCurrentSection] = useState(0)
   const [config, setConfig] = useState({
     center: {
       lang: 88.1492,
@@ -55,12 +54,6 @@ const GeneralMode = () => {
       center: [config.center.lang, config.center.lat],
       zoom: config.zoom
     });
-
-    map.current.on('load', () => {
-      map.current.setLayoutProperty('dev-true-char-paths', 'visibility', 'none')
-      map.current.setLayoutProperty('dev-layer-pos-neg', 'visibility', 'none')
-      console.log(map.current.getStyle().layers)
-    })
   }, [])
 
   useEffect(() => {
@@ -71,6 +64,9 @@ const GeneralMode = () => {
       map.current.setLayoutProperty('dev-char-layer-unf-pak', 'visibility', 'none')
       map.current.setLayoutProperty('dev-char-layer-unf-ind', 'visibility', 'none')
       map.current.setLayoutProperty('dev-char-paths-unf', 'visibility', 'none')
+
+      map.current.setLayoutProperty('dev-true-char-paths', 'visibility', 'none')
+      map.current.setLayoutProperty('dev-layer-pos-neg', 'visibility', 'none')
     })
   })
 
@@ -90,7 +86,7 @@ const GeneralMode = () => {
 
   const selectionHandle = (layer) => {
     const visibility = map.current ? map.current.getLayoutProperty(layer, 'visibility') : null;
-    console.log(visibility)
+    // console.log(visibility)
 
     if (visibility == 'visible') {
       map.current.setLayoutProperty(layer, 'visibility', 'none');
@@ -118,8 +114,6 @@ const GeneralMode = () => {
       <Slide
         PARTS={PARTS}
         map={map}
-        currentSection={currentSection}
-        setCurrentSlide={setCurrentSection}
       />
 
       <div className="selection">

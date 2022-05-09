@@ -1,5 +1,5 @@
 const Infobox = ({info}) => {
-  console.log(info)
+  // console.log(info)
   return (
     <div className={ `infobox ${info.length > 0 ? "active" : ""}` }>
       <h3>Infobox</h3>

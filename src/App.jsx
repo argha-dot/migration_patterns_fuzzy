@@ -10,7 +10,6 @@ import '../styles/App.css';
 
 
 function App() {
-  console.log(window.innerHeight);
   const [isStoryMode, setIsStoryMode] = useState(false);
   useEffect(() => {
   }, [])

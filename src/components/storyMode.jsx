@@ -60,7 +60,6 @@ const StoryMode = () => {
   const mapContainer = useRef(null);
   const map = useRef(null);
 
-  const [currentSection, setCurrentSection] = useState(0)
   const [info, setInfo] = useState([])
 
   const [config, setConfig] = useState({
@@ -87,7 +86,7 @@ const StoryMode = () => {
       map.current.setLayoutProperty('dev-char-layer-unf-bang', 'visibility', 'none')
       map.current.setLayoutProperty('dev-char-layer-unf-pak', 'visibility', 'none')
       map.current.setLayoutProperty('dev-char-layer-unf-ind', 'visibility', 'none')
-      console.log(map.current.getStyle().layers)
+      // console.log(map.current.getStyle().layers)
     });
   }, [])
 
@@ -129,8 +128,6 @@ const StoryMode = () => {
       <Slide
         PARTS={PARTS}
         map={map}
-        currentSection={currentSection}
-        setCurrentSlide={setCurrentSection}
       />
       <Infobox info={info} />
     </>

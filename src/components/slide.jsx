@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowIcon } from "./icons";
 import useVisibility from "../hooks/useVisibility"
 
@@ -17,18 +17,18 @@ const Feature = ({part, map}) => {
   }, [isVisible]);
 
   return (
-    <section ref={ref} key={part.section} className={`part_${part.section} feature ${isVisible ? "visible" : ""}`}>
+    <section ref={ref} className={`part_${part.section} feature ${isVisible ? "visible" : ""}`}>
       <h3>{part.title}</h3>
       <p>{part.content}</p>
     </section>
   );
 }
 
-const Slide = ({PARTS, map, currentSlide, setCurrentSlide}) => {
+const Slide = ({PARTS, map }) => {
   const [toggleSlide, setToggleSlide] = useState(true);
 
   const onScroll = () => {
-    console.log("hello")
+    // console.log("hello")
   }
 
   useEffect(() => {
@@ -48,10 +48,12 @@ const Slide = ({PARTS, map, currentSlide, setCurrentSlide}) => {
       <div className="features-content">
         { Object.values(PARTS).map((part) => {
           return (
-            <Feature
-              part={part}
-              map={map}
-            />
+            <React.Fragment key={part.section}>
+              <Feature
+                part={part}
+                map={map}
+              />
+            </React.Fragment>
           )
         }) }
       </div>
