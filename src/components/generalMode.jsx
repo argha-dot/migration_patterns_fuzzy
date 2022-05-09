@@ -97,7 +97,6 @@ const GeneralMode = () => {
     } else {
       map.current.setLayoutProperty(layer, 'visibility', 'visible');
     }
-
   }
 
   return (

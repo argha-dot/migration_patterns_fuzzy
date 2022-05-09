@@ -61,6 +61,7 @@ const StoryMode = () => {
   const map = useRef(null);
 
   const [currentSection, setCurrentSection] = useState(0)
+  const [info, setInfo] = useState([])
 
   const [config, setConfig] = useState({
     center: {
@@ -104,6 +105,18 @@ const StoryMode = () => {
     })
   })
 
+  useEffect(() => {
+    map.current.on('mousemove', (e) => {
+      var _info = map.current.queryRenderedFeatures(e.point, {
+        layers: ['dev-layer-pos-neg']
+      });
+      if (_info.length > 0) {
+        setInfo(_info)
+      } else {
+        setInfo([])
+      }
+    })
+  }, [info])
 
   return (
     <>
@@ -119,7 +132,7 @@ const StoryMode = () => {
         currentSection={currentSection}
         setCurrentSlide={setCurrentSection}
       />
-      <Infobox />
+      <Infobox info={info} />
     </>
   )
 }
