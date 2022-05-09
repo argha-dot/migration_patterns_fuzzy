@@ -11,14 +11,14 @@ import '../styles/App.css';
 
 function App() {
   console.log(window.innerHeight);
-  const [isStoryMode, setIsStoryMode] = useState(true);
+  const [isStoryMode, setIsStoryMode] = useState(false);
   useEffect(() => {
   }, [])
 
   return (
     <div className="app">
       <div className="modes">
-        <p>Story Mode</p>
+        <p>General Mode</p>
         <Toggle
           leftBackgroundColor="tomato"
           rightBackgroundColor="green"
@@ -27,7 +27,7 @@ function App() {
           name="toggle-3"
           onToggle={() => setIsStoryMode(!isStoryMode)}
         />
-        <p style={{textAlign: "right"}}>General Mode</p>
+        <p style={{textAlign: "right"}}>Story Mode</p>
       </div>
 
       { isStoryMode ?

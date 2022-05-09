@@ -99,6 +99,13 @@ const GeneralMode = () => {
     }
   }
 
+  const clearMap = () => {
+    map.current.setLayoutProperty('dev-char-layer-unf-bang', 'visibility', 'none')
+    map.current.setLayoutProperty('dev-char-layer-unf-pak', 'visibility', 'none')
+    map.current.setLayoutProperty('dev-char-layer-unf-ind', 'visibility', 'none')
+    map.current.setLayoutProperty('dev-char-paths-unf', 'visibility', 'none')
+  }
+
   return (
     <>
       <div ref={mapContainer} className="map"></div>
@@ -128,6 +135,7 @@ const GeneralMode = () => {
           )
         })
         }
+        <div onClick={() => clearMap()}>Clear Map </div>
       </div>
     </>
   )
