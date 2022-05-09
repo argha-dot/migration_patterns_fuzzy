@@ -67,12 +67,13 @@
 }
 
 .features-content {
-  background: white;
+  background: #333;
   width: 100%;
   padding: 1rem;
   /* display: flex; */
   /* flex-direction: column; */
   overflow-y: scroll;
+  color: #eee;
 }
 
 .features-content h3 {
@@ -125,12 +126,20 @@
   padding: 10px;
   margin-top: 5px;
   margin-left: 5px;
-  width: 250px;
+  min-width: 250px;
+  width: fit-content;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.infobox:hover {
+.infobox.active {
   background-color: rgba(255, 255, 255, 1);
+}
+
+.infobox-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .selection {

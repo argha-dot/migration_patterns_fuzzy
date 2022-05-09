@@ -7,20 +7,20 @@ import Sidebar from "./sidebar";
 const PARTS = [
   {
     title: "Introduction",
-    content: 'Introduction Following the Partitioning of India and Pakistan in 1947, there were migrations on an unfathomable scale with over 14 million Hindus, Muslims and Sikhs crossing the newly formed borders. The creation of these two new states resulted in atrocities beyond our comprehension through riots, massacres and abduction, to name a few. What emerges out of this is a whole new genre in the field of literature, telling the stories of fictional characters who experienced the partition in different ways. This is done against the backdrop of the actual partition and the tales are very much inspired by true events, if not directly autobiographical. Some of the authors who contributed to this new field were Sadaat Hasan Manto, Khushwant Singh, Mohinder Singh Sarda and Sunanda Sikdar in their texts ‘Mottled Dawn’, ‘The Train to Pakistan’, ‘Savage Harvest’ and ‘A Life Long Ago’ respectively. The project that we have undertaken aims to map the paths of those characters, who in these aforementioned texts made the journey across one of the new borders between India and Pakistan (including the erstwhile East Pakistan). We do this taking into account the additional factor of the interactions they have in their stories. Trying to answer the larger question of why these migrations were made, our group hypothesised that negative interactions in their narratives would be intertwined with their decision to make the migration. We have thus created this map showing the characters who move across the borders in their stories who have had either a positive or a negative interaction in the text they have been written about. ',
-    center: [74.8736, 31.6343083],
+    content: 'Introduction Following the Partitioning of India and Pakistan in 1947, there were migrations on an unfathomable scale with over 14 million Hindus, Muslims and Sikhs crossing the newly formed borders. The creation of these two new states resulted in atrocities beyond our comprehension through riots, massacres and abduction, to name a few. What emerges out of this is a whole new genre in the field of literature, telling the stories of fictional characters who experienced the partition in different ways. This is done against the backdrop of the actual partition and the tales are very much inspired by true events, if not directly autobiographical. Some of the authors who contributed to this new field were Sadaat Hasan Manto, Khushwant Singh, Mohinder Singh Sarda and Sunanda Sikdar in their texts ‘Mottled Dawn’, ‘The Train to Pakistan’, ‘Savage Harvest’ and ‘A Life Long Ago’ respectively.',
+    center: [ 89.9029, 22.7353],
     zoom: 4.00
   },
   {
-    title: "The question ",
-    content: 'As mentioned earlier, the map we have made shows the characters who move across the border in their respective stories when either a negative or a positive interaction has occurred. The larger question that we are trying to answer here is whether these interactions are related to their movement across the border. The more specific research question that we have tried to address, is whether negative interactions in the narratives of these characters are responsible for the migrations that they made.',
-    center: [77.1835, 28.6239],
+    title: "The Project",
+    content: 'The project that we have undertaken aims to map the paths of those characters, who in these aforementioned texts made the journey across one of the new borders between India and Pakistan (including the erstwhile East Pakistan). We do this taking into account the additional factor of the interactions they have in their stories. Trying to answer the larger question of why these migrations were made, our group hypothesised that negative interactions in their narratives would be intertwined with their decision to make the migration. We have thus created this map showing the characters who move across the borders in their stories who have had either a positive or a negative interaction in the text they have been written about. ',
+    center: [ 89.9029, 22.7353],
     zoom: 4.00
   },
   {
-    title: "Hypothesis",
-    content: 'The expectations of this project were that a large majority of those characters who move across the borders would be the ones who have had negative interactions in their narratives.',
-    center: [77.0688997, 28.5272803],
+    title: "What this project aims to do ",
+    content: 'As mentioned earlier, the map we have made shows the characters who move across the border in their respective stories when either a negative or a positive interaction has occurred. The larger question that we are trying to get people to think about is whether these interactions are related to their movement across the border. Head over to story mode to follow the narratives of three stories in Partition literature. Does it change your conception of Partition studies? Do you think you have something to add to this discourse?',
+    center: [ 89.9029, 22.7353],
     zoom: 4.00
   },
 ]
